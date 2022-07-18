@@ -1,12 +1,17 @@
 /* import from outside  */
 /* poppins  */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap');
-
+/* inter fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@700&family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap');
 /* common utilities */
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
+}
+section{
+    padding:0 20%;
+    margin:50px 0px;
 }
 /* button  */
 .button {
@@ -31,7 +36,7 @@ nav{
     display:flex;
     justify-content:space-between;
     background-color:rgba(0, 0, 0, 0.211);
-    padding:20px 390px;
+    padding:20px 20%;
     position:absolute;
     top:0;
     left:0;
@@ -58,6 +63,7 @@ nav{
     margin-top:100px;
     display:flex;
     justify-content:center;
+    padding:0 20%;
 }
 .top-banner-right {
     position: relative;
@@ -104,7 +110,92 @@ nav{
     border-radius: 25px;
 }
 /* header end  */
+/* main start  */
+.some-brands {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid linear-gradient(white,black,white);
+    padding: 10px 0;
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+}
+.brand {
+    margin-right: 75px;
+}
+.brand>img{
+    width:55.05px;
+    height:31.06px;
+}
+/* popular collection section  */
+.popular-collection{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.popular-collection>p{
+    margin-top: 20px;
+    /* text-align: left; */
+    display: flex;
+    width: 96%;
+    justify-content: flex-end;
+}
+.see-more{
+    color: #E02C6D;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+.collection-cards {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.card {
+    /* background-color: rebeccapurple; */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #f3f3f3;
+}
+.card-img{
+    width: 329px;
+    /* height: 476px; */
+}
+.card-img>img {
+    width: 100%;
+    height: 256px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.price {
+    margin: 10px 0;
+}
+.ratings .fa-solid{
+    color:#FB8200;
+    font-size:11px;
+}
+.ratings>span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    color: #5E6366;
 
+}
+.card-details {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 143%;
+}
+/* main end  */
 /* mobile responsibe  */
 @media screen and (max-width:666px){
     nav{
@@ -143,5 +234,24 @@ nav{
         line-height: 21px;
         text-align: center;
         width:80%;
+    }
+    /* main  */
+    .some-brands{
+        flex-wrap: wrap;
+    }
+    .brand{
+        margin-right: 15px;
+    }
+    .brand>img {
+        width: 33.05px;
+        height: 20.06px;
+        margin-bottom: 15px;
+    }
+    /* popular collection  */
+    .popular-collection>p{
+        width: 134%;
+    }
+    .collection-cards{
+        grid-template-columns: repeat(1,1fr);
     }
 }
